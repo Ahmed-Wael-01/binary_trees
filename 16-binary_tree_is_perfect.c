@@ -59,9 +59,9 @@ int is_full(const binary_tree_t *tree)
 		return (1);
 
 	if (tree->left)
-		lefty = binary_tree_is_full(tree->left);
+		lefty = is_full(tree->left);
 	if (tree->right)
-		righty = binary_tree_is_full(tree->right);
+		righty = is_full(tree->right);
 	return (lefty & righty);
 }
 
@@ -76,7 +76,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	if (is_full(tree) && tree_balance(tree))
+	if (is_full(tree) && tree_balance(tree) == 0)
 		return (1);
 	return (0);
 }
