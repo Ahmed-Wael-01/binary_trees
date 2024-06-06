@@ -10,6 +10,7 @@
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	if (node == NULL || node->parent == NULL
+			|| !node->parent->parent
 			|| !node->parent->parent->left
 			|| !node->parent->parent->right)
 		return (NULL);
