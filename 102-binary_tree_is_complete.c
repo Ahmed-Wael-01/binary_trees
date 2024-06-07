@@ -73,11 +73,11 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 
 	for (l = 1; l <= h; l++)
 	{
-		if (c && (tree-> left || tree->right))
-			return 0;
+		if (c && (tree->left || tree->right))
+			return (0);
 		if ((tree->left && !tree->right) || (!tree->left && tree->right))
 			c = 1;
-		tree_travel((binary_tree_t *)tree, level, NULL);
+		tree_travel((binary_tree_t *)tree, l, NULL);
 	}
-	return 1;
+	return (1);
 }
