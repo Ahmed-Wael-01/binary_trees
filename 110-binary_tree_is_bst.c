@@ -20,7 +20,7 @@ int is_bst(const binary_tree_t *tree, int low, int high)
 }
 /**
  * binary_tree_is_bst - checks if a binary tree is a valid
- * 			binary search tree
+ *			binary search tree
  * @tree: A pointer to the root
  * Return: 1 if it's valid else 0
  */
