@@ -52,4 +52,7 @@ int is_bst(const binary_tree_t *tree, int low, int high);
 int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_is_complete(const binary_tree_t *tree);
 void binary_tree_print(const binary_tree_t *);
+static int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
+static size_t _height(const binary_tree_t *tree);
+void binary_tree_print(const binary_tree_t *tree);
 #endif
